@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
+import { FAVORITE_POKEMONS } from '../../constants';
 import useAuth from '../../hooks/useAuth';
 import { getItemsObject, storeItemsObject } from '../../libs/storage';
 
@@ -17,7 +18,7 @@ const FavoriteButton = ({ pokemon }) => {
 	}, []);
 
 	const getFavoritePokemons = async () => {
-		const result = (await getItemsObject('FAVORITE_POKEMONS')) ?? '[]';
+		const result = (await getItemsObject(FAVORITE_POKEMONS)) ?? '[]';
 		const favoritePokemons = JSON.parse(result);
 
 		setListFavoritePokemons(favoritePokemons);
@@ -27,7 +28,7 @@ const FavoriteButton = ({ pokemon }) => {
 
 	const addFavorite = async () => {
 		await storeItemsObject(
-			'FAVORITE_POKEMONS',
+			FAVORITE_POKEMONS,
 			JSON.stringify([...listFavoritePokemons, pokemon])
 		);
 
@@ -41,7 +42,7 @@ const FavoriteButton = ({ pokemon }) => {
 		);
 
 		await storeItemsObject(
-			'FAVORITE_POKEMONS',
+			FAVORITE_POKEMONS,
 			JSON.stringify(favoritePokemonsFiltered)
 		);
 

@@ -1,32 +1,39 @@
 {
-	"expo": {
-		"name": "pokeDex",
-		"slug": "pokeDex",
-		"version": "1.0.0",
-		"orientation": "portrait",
-		"icon": "./src/assets/pokedex.png",
-		"userInterfaceStyle": "light",
-		"splash": {
-			"image": "./src/assets/pokedex.png",
-			"resizeMode": "contain",
-			"backgroundColor": "#ffffff"
-		},
-		"updates": {
-			"fallbackToCacheTimeout": 0
-		},
-		"assetBundlePatterns": ["**/*"],
-		"ios": {
-			"supportsTablet": true
-		},
-		"android": {
-			"package": "global.jose-aguilar.pokedex",
-			"adaptiveIcon": {
-				"foregroundImage": "./src/assets/pokeball-icon.png",
-				"backgroundColor": "#FFFFFF"
-			}
-		},
-		"web": {
-			"favicon": "./src/assets/pokeball-icon.png"
-		}
-	}
+  "expo": {
+    "name": "pokeDex",
+    "slug": "pokeDex",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./src/assets/pokedex.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./src/assets/pokedex.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.jose_aguilar.pokeDex",
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/pokeball-icon.png",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "web": {
+      "favicon": "./src/assets/pokeball-icon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "c7f07985-4d97-436a-bc5d-159ab822d073"
+      }
+    }
+  }
 }
